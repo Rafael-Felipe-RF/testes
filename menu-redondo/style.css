@@ -1,0 +1,74 @@
+@charsert "UTF8";
+
+.menu-circular {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.botao-central {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #555;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.opcoes-menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.opcao-menu {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #555;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.opcao-menu:nth-child(1) {
+	top: 50%;
+	left: 0;
+	transform: translateX(-50%);
+}
+
+.opcao-menu:nth-child(2) {
+	top: 0;
+	left: 50%;
+	transform: translateY(-50%);
+}
+
+.opcao-menu:nth-child(3) {
+	top: 50%;
+	right: 0;
+	transform: translateX(50%);
+}
+
+.opcao-menu:nth-child(4) {
+	bottom: 0;
+	left: 50%;
+	transform: translateY(50%);
+}
+
+.menu-circular:hover .opcoes-menu {
+	display: block;
+}

@@ -1,0 +1,38 @@
+.janela {
+    width: 400px;
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .barra-titulo {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .titulo {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .botao-minimizar, .botao-maximizar, .botao-fechar {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .botao-minimizar:hover, .botao-maximizar:hover, .botao-fechar:hover {
+    background-color: #444;
+  }
+  
+  .conteudo {
+    padding: 10px;
+  }
+  
