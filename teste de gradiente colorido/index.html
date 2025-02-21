@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borda Gradiente</title>
+    <style>
+        *{margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            background-color: rgb(149, 158, 156);          
+        }  
+
+        .caixa{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            color: white   ;
+            background-color: rgb(149, 158, 156);
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            border-radius: 3px;
+            font: 700 2em Arial;
+            text-transform: uppercase;
+            
+        }
+
+        .caixa::before, .caixa::after{
+            content: '';
+            position: absolute;
+            width: calc(100% + 30px);
+            height: calc(100% + 30px);
+            border-radius: 3px;
+            background: linear-gradient(45deg, #f00, #0f0, #00f, #f00);
+            z-index: -1;
+            background-size: 300%;
+            border-radius: 8px;
+            animation: animar 8s linear alternate infinite;
+
+
+        }
+
+        .caixa::after{
+            filter: blur(50px);
+        }
+
+        @keyframes animar{
+            0%{
+                background-position: 0 0;
+            }
+            
+            100%{
+                background-position: 300%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="caixa">
+        <p>Bem vindo de volta!</p>
+    </div>
+</body>
+</html>
